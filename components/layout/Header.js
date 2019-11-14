@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import styled from "styled-components";
-import { white } from "../../utils/Colors";
+import Logo from "../Logo";
 
 const StyledHeader = styled.header`
   align-items: center;
@@ -11,14 +11,14 @@ const StyledHeader = styled.header`
   height: 64px;
   justify-content: space-between;
   left: 0;
-  padding: 0 2em;
+  padding: 0;
   position: fixed;
   top: 0;
   width: 100%;
-
+  .logo {
+    padding: 0;
+  }
   a {
-    color: ${white};
-
     text-transform: uppercase;
     font-weight: 900;
     font-size: 0.75em;
@@ -43,14 +43,15 @@ const StyledHeader = styled.header`
 export const Header = () => {
   return (
     <StyledHeader>
+      <Link href="/">
+        <a className="logo">
+          <Logo></Logo>
+        </a>
+      </Link>
       <div>
         <Link href="/">
-          <a>
-            <span>iJS - NextJS + GraphQL</span>
-          </a>
+          <a>Home</a>
         </Link>
-      </div>
-      <div>
         <Link href="/about">
           <a>About</a>
         </Link>

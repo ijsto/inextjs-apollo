@@ -17,10 +17,9 @@ export const About = () => {
 
       <h2>iJS</h2>
       <p>
-        At iJS and okrainc.com we use Styled-Components in most of our
+        At iJS we use Next.js with Styled-Components in most of our
         applications. Being one of our core setups, we have prepared this
-        boilerplate project, which sets up Next.js application with
-        Styled-Components.
+        boilerplate project, which sets up these two amazing tools.
       </p>
     </div>
   );
