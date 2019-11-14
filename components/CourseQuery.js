@@ -1,5 +1,6 @@
 import { useQuery } from "react-apollo";
 import FIRST_QUERY from "../api/query/FIRST_QUERY";
+import CourseDeleteOne from "./CourseDeleteOne";
 
 export const CourseQuery = () => {
   const { data, loading, error } = useQuery(FIRST_QUERY);
@@ -15,7 +16,7 @@ export const CourseQuery = () => {
           <div key={c.id}>
             <div style={{ display: "grid", alignItems: "baseline" }}>
               <h3>{c.title}</h3>
-              <button>Del</button>
+              <CourseDeleteOne courseId={c.id}></CourseDeleteOne>
             </div>
             <p>{c.summary}</p>
           </div>
