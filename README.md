@@ -1,4 +1,4 @@
-# iNextJS-Apollo
+# iNextJS-Styled-Components
 
 [![github follow](https://img.shields.io/github/followers/ijsto?color=%23ff665a&label=Follow%20iJS.to&logo=github&style=for-the-badge)](https://github.com/ijsto)
 [![ijs](https://img.shields.io/badge/learn%20code-black?&message=Courses&style=for-the-badge&label=ijs.to&colorA=FF6666&colorB=776677)](https://ijs.to)
@@ -14,15 +14,15 @@ This project is a starter pack for a NextJS with Apollo Client and Styled-Compon
 - sample static page
 - sample dynamic page
 - custom babel config file
-- custom \_document.js and \_app.js files (to support Styled-Components and init Apollo Client)
+- custom \_document.js and \_app.js files (to support Styled-Components)
 
 ## Get Started (4 minutes)
 
-1. Clone the the [starter repo](https://github.com/ijsto/inextjs-apollo)
+1. Clone the the [starter repo](https://github.com/ijsto/istyled-nextjs)
 
 ```
 
-git clone git@github.com:ijsto/inextjs-apollo.git
+git clone git@github.com:ijsto/istyled-nextjs.git
 
 ```
 
@@ -30,7 +30,7 @@ git clone git@github.com:ijsto/inextjs-apollo.git
 
 ```
 
-cd inextjs-apollo
+cd istyled-nextjs
 
 ```
 
