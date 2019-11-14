@@ -74,14 +74,14 @@ const GlobalStyle = createGlobalStyle`
     margin-top: 1em;
     color: #00474b;
     font-weight: 400;
-    text-shadow: 0px -1px 0 #6bcd9c, 1px -1px 0 #6bcd9c, -1px 1px 0 #6bcd9c,
-      1px 0px 0 #6bcd9c;
+    text-shadow: 2px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+      1px -2px 0 #fff;
   }
   h4,
   h5,
   h6 {
-    text-shadow: 0px 0px 0 #6bcd9c, 0px -0px 0 #6bcd9c, -0px 0px 0 #6bcd9c,
-      0px 1px 0 #6bcd9c;
+    text-shadow: 0px -2px 0 #fff, 0px -0px 0 #fff, -1px 0px 2 #fff,
+      0px 1px 0 #fff;
 
   }
 
