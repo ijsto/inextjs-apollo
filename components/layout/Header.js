@@ -1,11 +1,11 @@
 import Link from "next/link";
 
 import styled from "styled-components";
-import { black, white, primary } from "../../utils/Colors";
+import { white } from "../../utils/Colors";
 
 const StyledHeader = styled.header`
   align-items: center;
-  background: ${primary};
+  background: ${({ theme }) => theme.primaryCol};
   border-color: white;
   display: flex;
   height: 64px;
@@ -18,13 +18,24 @@ const StyledHeader = styled.header`
 
   a {
     color: ${white};
-    margin: 0 1em;
 
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 0.75em;
+    letter-spacing: 1.5px;
+    line-height: 1.5em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3.25rem;
+    padding-bottom: 2rem;
+    text-decoration: none;
     &:hover {
-      text-shadow: 1px -1px 0 ${white}, 1px -1px 0 #776677, -1px 1px 0 ${white},
-        1px 2px 0 #776677;
+      color: #1c2b6d;
+      text-shadow: 1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 10px #fff,
+        1px 1px 0 #fff;
       font-weight: 800;
-      text-decoration: none;
     }
   }
 `;

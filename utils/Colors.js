@@ -1,11 +1,12 @@
 export const black = "#0D0D0D";
 export const grey = "#A3A1A8";
 export const ltGrey = "#e2e2e2";
-export const primary = "#6bcd9c";
+export const primaryCol = "#6bcd9c";
 export const accentCol = "#8a74d0";
 export const primaryBgCol = "#f7f7f7";
 export const secondaryCol = "#1c2b6d";
 export const invSecondaryCol = "#1c2b6d";
+export const warningCol = "#fd7150";
 export const red = "#BD1E2D";
 export const ltRed = "#C02D3B";
 export const white = "#F3F3F3";
