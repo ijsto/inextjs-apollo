@@ -1,9 +1,10 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 
 import Meta from "./Meta";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import { black } from "../utils/Colors";
+import theme from "../lib/theme";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -23,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: 'Comfortaa';
-    background-image: linear-gradient(to left, ${black} 0%, black 100%);
+    background: ${({ theme }) => theme.primaryBgCol};
     min-height: 100vh;
     padding-top: 64px;
     position: relative;
@@ -31,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    color: #776677;
+    color: ${({ theme }) => theme.secondaryCol};
     margin: 0;
     padding: 0;
     transition: 0.3s all;
@@ -56,11 +57,11 @@ const GlobalStyle = createGlobalStyle`
   }
   h2 {
     font-size: 2.25em;
-    letter-spacing: -2px;
+
   }
   h3 {
     font-size: 1.75em;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
   }
   
   h1,
@@ -71,25 +72,31 @@ const GlobalStyle = createGlobalStyle`
   h6 {
     font-family: 'Neutra Text', sans-serif;
     margin-top: 1em;
-    color: #fff;
+    color: #00474b;
     font-weight: 400;
-    text-shadow: 0px -1px 0 #776677, 1px -1px 0 #776677, -1px 1px 0 #776677,
-      1px 2px 0 #776677;
+    text-shadow: 0px -1px 0 #6bcd9c, 1px -1px 0 #6bcd9c, -1px 1px 0 #6bcd9c,
+      1px 0px 0 #6bcd9c;
+  }
+  h4,
+  h5,
+  h6 {
+    text-shadow: 0px 0px 0 #6bcd9c, 0px -0px 0 #6bcd9c, -0px 0px 0 #6bcd9c,
+      0px 1px 0 #6bcd9c;
+
   }
 
 `;
 
 const Page = ({ children }) => {
   return (
-    <>
-      <GlobalStyle />
-
+    <ThemeProvider theme={theme}>
       <Meta />
       <Header />
 
       {children}
       <Footer />
-    </>
+      <GlobalStyle />
+    </ThemeProvider>
   );
 };
 
