@@ -10,13 +10,17 @@ export const CourseQuery = () => {
   return (
     <div>
       <h2>Query</h2>
-
-      {data.courses.map(c => (
-        <div key={c.id}>
-          <h4>{c.title}</h4>
-          <p>{c.summary}</p>
-        </div>
-      ))}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr" }}>
+        {data.courses.map(c => (
+          <div key={c.id}>
+            <div style={{ display: "grid", alignItems: "baseline" }}>
+              <h3>{c.title}</h3>
+              <button>Del</button>
+            </div>
+            <p>{c.summary}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
