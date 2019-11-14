@@ -20,16 +20,9 @@ const StyledHeader = styled.header`
   }
   a {
     text-transform: uppercase;
-    font-weight: 900;
     font-size: 0.75em;
-    letter-spacing: 1.5px;
-    line-height: 1.5em;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 3.25rem;
-    padding-bottom: 2rem;
+    letter-spacing: 1px;
+    padding: 3.25rem 2rem 2rem 2rem;
     text-decoration: none;
     &:hover {
       color: #1c2b6d;

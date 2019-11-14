@@ -1,5 +1,4 @@
 import Jumbo from "../components/dataDisplay/Jumbo";
-import Card from "../components/dataDisplay/Card";
 
 export default () => {
   return (
@@ -8,20 +7,7 @@ export default () => {
         <h1>iNextJS + Styled-Components /></h1>
       </Jumbo>
 
-      <div>
-        <Card
-          image="https://ijs.to/images/PLACEHOLDER_COURSE_IMAGE.jpg"
-          title="Image"
-        >
-          This card contains image
-        </Card>
-      </div>
-
-      <style jsx>{`
-        li {
-          padding: 1em;
-        }
-      `}</style>
+      <input placeholder="Type in something nice" type="text" />
     </div>
   );
 };

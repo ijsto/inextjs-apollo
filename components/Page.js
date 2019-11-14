@@ -100,9 +100,8 @@ const GlobalStyle = createGlobalStyle`
     background: white;
     border: 0;
     border-color: rgb(209, 218, 225);
+    border: 2px solid;
     border-radius: 2px;
-    border-style: solid;
-    border-width: 2px;
     box-sizing: border-box;
     color: rgb(0, 0, 0);
     font-family: 'Comfortaa';
@@ -119,9 +118,9 @@ const GlobalStyle = createGlobalStyle`
     }
     &:focus {
       background-color: rgb(255, 255, 255);
-      color: rgb(64, 126, 241);
+      color: ${({ theme }) => theme.primaryCol};
       box-shadow: rgb(187, 187, 187) 0px 0px 5px 2px;
-      border-color: rgb(64, 126, 241);
+      border-color: ${({ theme }) => theme.accentCol};
     }
   }
 `;
