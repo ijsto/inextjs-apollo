@@ -1,15 +1,17 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 import Socials from "../Socials";
 
 const StyledFooter = styled.footer`
-  background: #776677;
+  background: ${({ theme }) => theme.accentCol};
   bottom: 0;
   left: 0;
   padding: 1.5em;
   position: fixed;
   text-align: center;
   width: 100%;
+  z-index: 1;
 
   div {
     color: white;
@@ -28,14 +30,32 @@ const StyledFooter = styled.footer`
     font-size: 0.75em;
   }
 `;
+const StyledFooterButton = styled.div`
+  bottom: 0;
+  right: 0;
+  padding: 1.5em;
+  position: fixed;
+  text-align: center;
+  z-index: 2;
+`;
 
 export const Footer = () => {
+  const [showFooter, setShow] = useState(false);
   return (
-    <StyledFooter>
-      <Socials />
+    <>
+      {showFooter ? (
+        <StyledFooter>
+          <Socials />
 
-      <div className="whatisthis">20</div>
-    </StyledFooter>
+          <div className="whatisthis">iJS Strapi</div>
+          <button onClick={() => setShow(!showFooter)}>Hide Footer</button>
+        </StyledFooter>
+      ) : (
+        <StyledFooterButton>
+          <button onClick={() => setShow(!showFooter)}>Show Footer</button>
+        </StyledFooterButton>
+      )}
+    </>
   );
 };
 
