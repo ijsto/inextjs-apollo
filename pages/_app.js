@@ -7,7 +7,7 @@ class AppWrapper extends App {
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);
     }
-    // expose query to the pages
+
     pageProps.query = ctx.query;
     pageProps.asPath = ctx.asPath;
 

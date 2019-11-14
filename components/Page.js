@@ -4,7 +4,6 @@ import Meta from "./Meta";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import theme from "../lib/theme";
-import DefaultLayout from "./layout/DefaultLayout";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -132,7 +131,7 @@ const Page = ({ children }) => {
     <ThemeProvider theme={theme}>
       <Meta />
       <Header />
-      <DefaultLayout>{children}</DefaultLayout>
+      {children}
       <Footer />
       <GlobalStyle />
     </ThemeProvider>

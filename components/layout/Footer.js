@@ -13,16 +13,12 @@ const StyledFooter = styled.footer`
   text-align: center;
   width: 100%;
   z-index: 1;
-
-  div {
-    color: white;
-  }
-
+  div,
   a {
     color: white;
-  }
-  a:hover {
-    color: orange;
+    &:hover {
+      color: orange;
+    }
   }
   .whatisthis {
     margin-top: 3em;
@@ -49,19 +45,23 @@ export const Footer = () => {
   return (
     <>
       {showFooter ? (
-        <StyledFooter>
-          <Socials />
+        <>
+          <StyledFooter>
+            <Socials />
 
-          <div className="whatisthis">iJS Strapi</div>
-          <Button small warn onClick={() => setShow(!showFooter)}>
-            Hide Footer
-          </Button>
-        </StyledFooter>
+            <div className="whatisthis">
+              <a href="https://ijs.to" target="_blank">
+                iJS.to
+              </a>
+            </div>
+          </StyledFooter>
+          <StyledFooterButton>
+            <Button onClick={() => setShow(!showFooter)}>Hide Footer</Button>
+          </StyledFooterButton>
+        </>
       ) : (
         <StyledFooterButton>
-          <Button small onClick={() => setShow(!showFooter)}>
-            Show Footer
-          </Button>
+          <Button onClick={() => setShow(!showFooter)}>Show Footer</Button>
         </StyledFooterButton>
       )}
     </>

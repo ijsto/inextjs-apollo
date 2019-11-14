@@ -51,11 +51,8 @@ export const Header = () => {
         </Link>
       </div>
       <div>
-        <Link href="/">
-          <a>Query</a>
-        </Link>
-        <Link href="/mutation">
-          <a>Mutation</a>
+        <Link href="/about">
+          <a>About</a>
         </Link>
       </div>
     </StyledHeader>
