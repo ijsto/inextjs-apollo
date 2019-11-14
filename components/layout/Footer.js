@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 
 import Socials from "../Socials";
+import Button from "../common/Button";
 
 const StyledFooter = styled.footer`
   background: ${({ theme }) => theme.accentCol};
@@ -37,6 +38,10 @@ const StyledFooterButton = styled.div`
   position: fixed;
   text-align: center;
   z-index: 2;
+  button {
+    background: ${({ theme }) => theme.accentCol};
+    color: white;
+  }
 `;
 
 export const Footer = () => {
@@ -48,11 +53,15 @@ export const Footer = () => {
           <Socials />
 
           <div className="whatisthis">iJS Strapi</div>
-          <button onClick={() => setShow(!showFooter)}>Hide Footer</button>
+          <Button small warn onClick={() => setShow(!showFooter)}>
+            Hide Footer
+          </Button>
         </StyledFooter>
       ) : (
         <StyledFooterButton>
-          <button onClick={() => setShow(!showFooter)}>Show Footer</button>
+          <Button small onClick={() => setShow(!showFooter)}>
+            Show Footer
+          </Button>
         </StyledFooterButton>
       )}
     </>

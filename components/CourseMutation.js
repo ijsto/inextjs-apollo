@@ -2,6 +2,7 @@ import { Formik, Form } from "formik";
 import { useMutation } from "react-apollo";
 import FIRST_MUTATION from "../api/mutation/FIRST_MUTATION";
 import FIRST_QUERY from "../api/query/FIRST_QUERY";
+import Button from "./common/Button";
 
 export const CourseMutation = () => {
   const [createCourse, { loading }] = useMutation(FIRST_MUTATION, {
@@ -19,7 +20,7 @@ export const CourseMutation = () => {
 
   return (
     <div>
-      <h2>Create Course</h2>
+      <h2>Saturday Courses</h2>
       <Formik
         initialValues={{
           title: "",
@@ -61,9 +62,11 @@ export const CourseMutation = () => {
                 </div>
               </div>
 
-              <button type="submit" disabled={loading}>
-                Save Changes
-              </button>
+              <div style={{ margin: "0 auto" }}>
+                <Button type="submit" disabled={loading}>
+                  {loading ? "Creating .." : "Create Course"}
+                </Button>
+              </div>
             </Form>
           );
         }}
